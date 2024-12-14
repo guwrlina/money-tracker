@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker - GLP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Personal Finance Tracker</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="grid">
+            <div class="card">
+                <h2>Income</h2>
+                <input type="number" id="incomeInput" placeholder="Enter amount in pesos" min="0" step="1">
+                <input type="text" id="incomeClassification" placeholder="Enter classification">
+                <button id="addIncome">Add Income</button>
+                <ul id="incomeList"></ul>
+                <p id="incomeDisplay">Total: ₱0</p>
+            </div>
+            <div class="card">
+                <h2>Expenses</h2>
+                <input type="number" id="expenseInput" placeholder="Enter amount in pesos" min="0" step="1">
+                <input type="text" id="expenseClassification" placeholder="Enter classification">
+                <button id="addExpense">Add Expense</button>
+                <ul id="expenseList"></ul>
+                <p id="expenseDisplay">Total: ₱0</p>
+            </div>
+            <div class="card">
+                <h2>Savings Goal</h2>
+                <input type="number" id="savingsGoalInput" placeholder="Enter amount in pesos" min="0" step="1">
+                <input type="text" id="savingsGoalClassification" placeholder="Enter classification">
+                <button id="addSavingsGoal">Add Savings Goal</button>
+                <ul id="savingsGoalList"></ul>
+                <p id="savingsDisplay">Progress: 0%</p>
+                <div class="progress-bar">
+                    <div id="progressBarFill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button id="toggleDarkMode">Toggle Dark Mode</button>
+            <button id="submitData">Submit</button>
+        </div>
+
+        <div class="calendar">
+            <h2>Financial Calendar</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Income</th>
+                        <th>Expenses</th>
+                        <th>Savings</th>
+                        <th>Progress</th>
+                        <th>Classifications</th>
+                    </tr>
+                </thead>
+                <tbody id="calendarBody">
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 Personal Finance Tracker | GLP</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
